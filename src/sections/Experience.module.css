@@ -1,0 +1,91 @@
+.expSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--accent-color);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.expCard {
+  padding: 2.5rem;
+  transition: transform 0.3s ease;
+}
+
+.expCard:hover {
+  transform: translateY(-5px);
+}
+
+.expHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.role {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  font-family: var(--font-body);
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.details {
+  padding-left: 1.2rem;
+}
+
+.details li {
+  margin-bottom: 0.8rem;
+  position: relative;
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+.details li::before {
+  content: "—";
+  position: absolute;
+  left: -1.5rem;
+  color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+  .expHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .meta {
+    align-items: flex-start;
+  }
+  .expCard {
+    padding: 1.5rem;
+  }
+}

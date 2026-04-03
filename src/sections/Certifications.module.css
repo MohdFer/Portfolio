@@ -1,0 +1,65 @@
+.certSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--accent-color);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.certCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.certCard:hover {
+  transform: translateX(10px);
+}
+
+.certContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.certTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.certIssuer {
+  font-family: var(--font-body);
+  color: var(--accent-color);
+  font-size: 1.1rem;
+}
+
+.certYear {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .certCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+}

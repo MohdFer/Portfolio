@@ -1,0 +1,16 @@
+.themeBtn {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  z-index: 1000;
+  cursor: none;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.themeBtn:hover {
+  opacity: 1;
+}

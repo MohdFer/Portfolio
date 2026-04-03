@@ -1,0 +1,53 @@
+.skillsSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--accent-color);
+  margin-bottom: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 300;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.categoryTitle {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skillBadge {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.1rem;
+  font-family: var(--font-body);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  user-select: none;
+}
+
+.skillBadge:hover {
+  transform: translateY(-5px);
+  background: var(--text-primary);
+  color: var(--bg-color);
+}
+
+@media (max-width: 768px) {
+  .skillBadge {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+  }
+}

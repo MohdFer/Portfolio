@@ -1,0 +1,38 @@
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.greeting {
+  font-size: clamp(3rem, 8vw, 6rem);
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.headline {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-weight: 500;
+  max-width: 80%;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.subheadline {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-family: var(--font-body);
+  max-width: 60%;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .headline, .subheadline {
+    max-width: 100%;
+  }
+}

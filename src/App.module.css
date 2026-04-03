@@ -1,0 +1,21 @@
+.mainContainer {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+section {
+  min-height: 100vh;
+  padding: 6rem 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 4rem 5vw;
+  }
+}
