@@ -1,17 +1,27 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Volume2, VolumeX } from 'lucide-react';
 import styles from './AudioToggle.module.css';
+import lofiAudio from '../assets/Lofi.mp3';
 
 const AudioToggle = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef(null);
 
   useEffect(() => {
     // We create the audio object once
-    audioRef.current = new Audio('https://cdn.pixabay.com/download/audio/2022/11/22/audio_febc508520.mp3?filename=ambient-piano-amp-strings-10711.mp3');
+    audioRef.current = new Audio(lofiAudio);
     audioRef.current.loop = true;
     audioRef.current.volume = 0.3; // subtle
     
+    // Attempt auto-play
+    const playPromise = audioRef.current.play();
+    if (playPromise !== undefined) {
+      playPromise.catch((error) => {
+        console.log('Autoplay prevented by browser:', error);
+        setIsPlaying(false);
+      });
+    }
+
     return () => {
       audioRef.current.pause();
     };
