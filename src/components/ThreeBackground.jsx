@@ -53,17 +53,17 @@ const ThreeBackground = () => {
     window.addEventListener('mousemove', onMouseMove);
 
     // Animation Loop
-    const clock = new THREE.Clock();
+    let startTime = Date.now();
 
     const animate = () => {
-      const elapsedTime = clock.getElapsedTime();
+      const elapsedTime = (Date.now() - startTime) / 1000;
 
       particlesMesh.rotation.y = elapsedTime * 0.05;
       particlesMesh.rotation.x = elapsedTime * 0.02;
 
-      // Subtle mouse interaction
-      camera.position.x += (mouseX * 0.5 - camera.position.x) * 0.05;
-      camera.position.y += (-mouseY * 0.5 - camera.position.y) * 0.05;
+      // Mouse interaction parallax (sliding effect without lookAt)
+      camera.position.x += (mouseX * 2.0 - camera.position.x) * 0.05;
+      camera.position.y += (-mouseY * 2.0 - camera.position.y) * 0.05;
 
       renderer.render(scene, camera);
       requestAnimationFrame(animate);

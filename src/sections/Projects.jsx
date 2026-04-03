@@ -32,6 +32,7 @@ const Projects = () => {
 
   useEffect(() => {
     cardsRef.current.forEach((card, index) => {
+      if (!card) return;
       gsap.fromTo(card,
         { y: 50, opacity: 0 },
         {

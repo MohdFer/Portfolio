@@ -9,6 +9,7 @@ import ThemeToggle from './components/ThemeToggle';
 import AudioToggle from './components/AudioToggle';
 import NoiseOverlay from './components/NoiseOverlay';
 import ThreeBackground from './components/ThreeBackground';
+import Sidebar from './components/Sidebar';
 
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -58,6 +59,7 @@ function App() {
       {loading && <Loader onComplete={() => setLoading(false)} />}
       
       <Cursor />
+      <Sidebar />
       <ThemeToggle />
       <AudioToggle />
       <NoiseOverlay />

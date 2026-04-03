@@ -35,6 +35,7 @@ const Experience = () => {
 
   useEffect(() => {
     itemsRef.current.forEach((item, index) => {
+      if (!item) return;
       gsap.fromTo(item,
         { y: 50, opacity: 0 },
         {

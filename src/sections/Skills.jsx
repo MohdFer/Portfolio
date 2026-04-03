@@ -21,9 +21,17 @@ const skillCategories = [
 const Skills = () => {
   const sectionRef = useRef(null);
   const itemsRef = useRef([]);
+  itemsRef.current = [];
+
+  const addToRefs = el => {
+    if (el && !itemsRef.current.includes(el)) {
+      itemsRef.current.push(el);
+    }
+  };
 
   useEffect(() => {
     itemsRef.current.forEach((item, index) => {
+      if (!item) return;
       gsap.fromTo(item,
         { y: 30, opacity: 0 },
         {
@@ -52,7 +60,7 @@ const Skills = () => {
                 <div 
                   className={`glass-panel magnetic ${styles.skillBadge}`} 
                   key={i}
-                  ref={el => itemsRef.current.push(el)}
+                  ref={addToRefs}
                 >
                   {skill}
                 </div>

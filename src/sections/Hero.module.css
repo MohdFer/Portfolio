@@ -1,9 +1,40 @@
 .heroSection {
   min-height: 100vh;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.content {
+  flex: 1;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+.imageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  filter: grayscale(80%) contrast(1.1); /* Fits Kento Kawazoe's vibe */
+  box-shadow: 0 10px 30px var(--shadow);
+  transition: filter 0.5s ease;
+}
+
+.heroImage:hover {
+  filter: grayscale(0%) contrast(1);
 }
 
 .greeting {
@@ -16,7 +47,6 @@
 .headline {
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 500;
-  max-width: 80%;
   margin-bottom: 2rem;
   line-height: 1.1;
   color: var(--text-primary);
@@ -26,13 +56,27 @@
 .subheadline {
   font-size: clamp(1.1rem, 2vw, 1.5rem);
   font-family: var(--font-body);
-  max-width: 60%;
+  max-width: 80%;
   color: var(--text-secondary);
   line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-  .headline, .subheadline {
+@media (max-width: 900px) {
+  .heroSection {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .content {
+    align-items: center;
+  }
+
+  .subheadline {
     max-width: 100%;
+  }
+
+  .imageWrapper {
+    margin-top: 3rem;
   }
 }

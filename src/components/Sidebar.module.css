@@ -1,0 +1,44 @@
+.iconContainer {
+  position: fixed;
+  left: 3vw;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 1000;
+}
+
+.iconLink {
+  color: var(--text-primary);
+  opacity: 0.7;
+  transition: opacity 0.3s, transform 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconLink:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.copyright {
+  position: fixed;
+  bottom: 2rem;
+  left: 3vw;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .iconContainer {
+    display: none; /* Hide sticky sidebar on mobile */
+  }
+  .copyright {
+    left: 5vw;
+  }
+}

@@ -32,19 +32,6 @@ const Contact = () => {
           I aim to gain strong industry experience as a developer and deepen my understanding of networking and system design.
           In the long term, I plan to work on impactful systems that solve real-world problems.
         </p>
-
-        <div className={styles.details}>
-          <a href="mailto:mhdfroez@outlook.com" className={`magnetic ${styles.contactLink}`}>
-            mhdfroez@outlook.com
-          </a>
-          <a href="https://linkedin.com/in/Mohamed-Feroz" target="_blank" rel="noopener noreferrer" className={`magnetic ${styles.contactLink}`}>
-            LinkedIn: Mohamed Feroz
-          </a>
-          <span className={styles.location}>Tamil Nadu, India</span>
-        </div>
-      </div>
-      <div className={styles.footer}>
-        <p>© {new Date().getFullYear()} Mohamed Feroz. Built calmly.</p>
       </div>
     </section>
   );

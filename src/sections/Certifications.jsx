@@ -16,6 +16,7 @@ const Certifications = () => {
 
   useEffect(() => {
     itemsRef.current.forEach((item, index) => {
+      if (!item) return;
       gsap.fromTo(item,
         { x: -50, opacity: 0 },
         {
