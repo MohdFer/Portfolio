@@ -10,10 +10,9 @@ const experiences = [
     date: 'Jul 2025 – Aug 2025',
     location: 'Nagercoil, India',
     details: [
-      'Worked on StockFlow Admin App',
-      'Developed telecalling feature',
-      'Used Flutter, Firebase, Hive',
-      'Integrated Bluetooth printing',
+      'Explored peer-to-peer (P2P) communication between admin and sales applications',
+      'Developed telecalling module for StockFlow',
+      'Used Flutter, Firebase',
       'Contributed to real-world business workflow'
     ]
   },

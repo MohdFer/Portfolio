@@ -15,11 +15,6 @@ const projects = [
     desc: 'Engineered an offline-first, production-ready desktop ERP application for garments wholesalers and traders. Built GST-compliant PDF invoice generation and optimized the Windows packaging pipeline.'
   },
   {
-    title: 'Public Bus Tracking System (Upcoming)',
-    tags: ['GPS', 'Real-time System'],
-    desc: 'Real-time GPS tracking system focused on public transport usability. A scalable and practical solution.'
-  },
-  {
     title: 'AI Music Filter (Concept)',
     tags: ['AI', 'Audio Processing', 'Chrome Extension'],
     desc: 'Chrome extension idea that removes background music and keeps speech. Focuses on AI and audio processing.'

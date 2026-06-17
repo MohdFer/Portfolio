@@ -10,7 +10,7 @@ const skillCategories = [
   },
   {
     title: 'Concepts',
-    skills: ['Networking', 'Operating Systems', 'Data Structures']
+    skills: ['Networking', 'Operating Systems', 'Hardware Troubleshooting']
   },
   {
     title: 'Tools',
