@@ -10,9 +10,9 @@ const projects = [
     desc: 'Web-based billing and inventory system with real-time data handling. Designed for multi-device store usage.'
   },
   {
-    title: 'StockFlow Admin App',
-    tags: ['Flutter', 'Firebase', 'Hive'],
-    desc: 'Distributor management system incorporating a telecalling feature and real-world business solutions.'
+    title: 'Garments Trading ERP (EliteSoft)',
+    tags: ['Electron', 'React.js','Express.js', 'Node.js', 'SQLite', 'Tailwind CSS'],
+    desc: 'Engineered an offline-first, production-ready desktop ERP application for garments wholesalers and traders. Built GST-compliant PDF invoice generation and optimized the Windows packaging pipeline.'
   },
   {
     title: 'Public Bus Tracking System (Upcoming)',
