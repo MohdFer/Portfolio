@@ -63,6 +63,28 @@
   flex-grow: 1;
 }
 
+.demoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.demoLink:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+}
+
 @media (max-width: 768px) {
   .card {
     padding: 1.5rem;

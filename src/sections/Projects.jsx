@@ -1,18 +1,25 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ExternalLink } from 'lucide-react';
 import styles from './Projects.module.css';
 
 const projects = [
   {
-    title: 'POS / Inventory Management System',
-    tags: ['React', 'Firebase'],
-    desc: 'Web-based billing and inventory system with real-time data handling. Designed for multi-device store usage.'
+    title: 'KOMPASS — Intelligent Tour Coordination & Management App',
+    tags: ['Flutter', 'Dart', 'Riverpod', 'Firebase', 'TypeScript', 'OpenStreetMap'],
+    desc: 'Engineered a cross-platform mobile application consolidating group tour itineraries, real-time messaging, and emergency SOS alerts into a single role-based platform for organizers and participants. Built consent-based live GPS tracking, interactive mapping, and proximity geofencing around scheduled checkpoints using OpenStreetMap (flutter_map) and Geolocator. Implemented paperless checkpoint attendance via dynamic QR code scanning (mobile_scanner) backed by Cloud Firestore, Firebase Cloud Functions, and FCM push notifications for instant real-time updates.',
+    demoUrl: 'https://kompass.publicvm.com'
   },
   {
     title: 'Garments Trading ERP (EliteSoft)',
     tags: ['Electron', 'React.js','Express.js', 'Node.js', 'SQLite', 'Tailwind CSS'],
     desc: 'Engineered an offline-first, production-ready desktop ERP application for garments wholesalers and traders. Built GST-compliant PDF invoice generation and optimized the Windows packaging pipeline.'
+  },
+  {
+    title: 'POS / Inventory Management System',
+    tags: ['React', 'Firebase'],
+    desc: 'Web-based billing and inventory system with real-time data handling. Designed for multi-device store usage.'
   },
   {
     title: 'AI Music Filter (Concept)',
@@ -61,6 +68,17 @@ const Projects = () => {
               ))}
             </div>
             <p className={styles.desc}>{proj.desc}</p>
+            {proj.demoUrl && (
+              <a
+                href={proj.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`magnetic ${styles.demoLink}`}
+              >
+                <span>Live Demo</span>
+                <ExternalLink size={16} />
+              </a>
+            )}
           </div>
         ))}
       </div>
