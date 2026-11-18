@@ -5,6 +5,16 @@ import styles from './Experience.module.css';
 
 const experiences = [
   {
+    role: 'Software Developer Intern',
+    company: 'Enyard',
+    date: 'Jul 2026 – Sep 2026',
+    location: '',
+    details: [
+      'Contributed to development of Xpos, a multi-tenant ERP and point-of-sale platform.',
+      'Contributed to Timex CCTV, an AI-powered CCTV analytics and attendance system.'
+    ]
+  },
+  {
     role: 'Student Intern',
     company: 'FlutterFrog Software Solutions',
     date: 'Jul 2025 – Aug 2025',
@@ -68,7 +78,7 @@ const Experience = () => {
               </div>
               <div className={styles.meta}>
                 <span className={styles.date}>{exp.date}</span>
-                <span className={styles.location}>{exp.location}</span>
+                {exp.location && <span className={styles.location}>{exp.location}</span>}
               </div>
             </div>
             <ul className={styles.details}>

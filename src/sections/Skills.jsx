@@ -5,16 +5,30 @@ import styles from './Skills.module.css';
 
 const skillCategories = [
   {
-    title: 'Technologies',
-    skills: ['React', 'Firebase', 'Flutter', 'Python', 'Java']
+    title: 'IT',
+    skills: [
+      'Windows installation and setup',
+      'PC hardware troubleshooting',
+      'Driver and boot-error troubleshooting',
+      'BIOS configuration',
+      'Basic LAN cable testing',
+      'Basic router configuration',
+      'Networking fundamentals',
+      'TCP/IP concepts',
+      'LAN connectivity troubleshooting'
+    ]
   },
   {
-    title: 'Concepts',
-    skills: ['Networking', 'Operating Systems', 'Hardware Troubleshooting']
+    title: 'Software & Tools',
+    skills: ['Git', 'GitHub', 'Electron', 'Firebase', 'Vercel']
   },
   {
-    title: 'Tools',
-    skills: ['GitHub', 'VS Code', 'Firebase Console']
+    title: 'Programming & Data',
+    skills: ['Java', 'C', 'JavaScript', 'SQL', 'SQLite', 'PostgreSQL', 'Firebase Firestore']
+  },
+  {
+    title: 'Other Tools',
+    skills: ['Canva', 'Adobe Photoshop']
   }
 ];
 
@@ -50,7 +64,7 @@ const Skills = () => {
 
   return (
     <section className={styles.skillsSection} ref={sectionRef}>
-      <h2 className={styles.title}>Skills</h2>
+      <h2 className={styles.title}>Technical Skills</h2>
       <div className={styles.grid}>
         {skillCategories.map((category, idx) => (
           <div className={styles.category} key={idx}>
