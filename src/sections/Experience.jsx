@@ -21,8 +21,6 @@ const experiences = [
     location: 'Nagercoil, India',
     details: [
       'Explored peer-to-peer (P2P) communication between admin and sales applications',
-      'Developed telecalling module for StockFlow',
-      'Used Flutter, Firebase',
       'Contributed to real-world business workflow'
     ]
   },
