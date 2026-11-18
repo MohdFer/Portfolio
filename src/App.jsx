@@ -68,9 +68,9 @@ function App() {
       <main className={styles.mainContainer} style={{ opacity: loading ? 0 : 1, transition: 'opacity 0.5s ease' }}>
         <Hero />
         <About />
-        <Skills />
         <Projects />
         <Experience />
+        <Skills />
         <Certifications />
         <Contact />
       </main>
